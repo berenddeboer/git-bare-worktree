@@ -19,14 +19,14 @@ folder.
 
 ```text
 Create a bare Git clone and one initial worktree for
-`git@github.com:owner/repo.git` at `~/src/owner/repo`.
+git@github.com:owner/repo.git at ~/src/owner/repo.
 ```
 
 ### Create four worktrees
 
 ```text
-Create a bare Git clone for `git@github.com:owner/repo.git` at
-`~/src/owner/repo`, with four worktrees named `worktree1` through `worktree4`.
+Create a bare Git clone for git@github.com:owner/repo.git at
+~/src/owner/repo, with four worktrees named worktree1 through worktree4.
 ```
 
 ## What it creates
