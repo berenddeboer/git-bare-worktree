@@ -12,13 +12,18 @@ npx skills@latest add berenddeboer/git-bare-worktree --global
 
 ## Using the script
 
-The global installation makes this an **agent skill**. Agents read `SKILL.md` and invoke the bundled script from the skill's installed directory; it does **not** put `setup-bare-worktree.sh` on your shell `PATH`.
+The global installation installs the entire skill directory, including `SKILL.md` and `scripts/setup-bare-worktree.sh`. This skill is intended for agents: they read the instructions and invoke the bundled script from their installed skill directory.
 
-The relative command below is for a checkout of this repository. Clone the repository first if you want to run the script yourself:
+The script is not added to your shell `PATH`. Its installed location depends on the agent; for the shared global agent-skill location it is:
+
+```text
+~/.agents/skills/git-bare-worktree/scripts/setup-bare-worktree.sh
+```
+
+For example:
 
 ```bash
-git clone git@github.com:berenddeboer/git-bare-worktree.git ~/src/git-bare-worktree
-~/src/git-bare-worktree/scripts/setup-bare-worktree.sh \
+~/.agents/skills/git-bare-worktree/scripts/setup-bare-worktree.sh \
   git@github.com:owner/repo.git \
   ~/src/owner/repo
 ```
