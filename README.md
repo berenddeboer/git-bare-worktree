@@ -10,12 +10,23 @@ Install this skill globally so it is available to your agents from any project:
 npx skills@latest add berenddeboer/git-bare-worktree --global
 ```
 
-## Example prompt
+## Example prompts
 
-Paste this into your agent, replacing the repository URL and target directory:
+Paste one of these into your agent, replacing the repository URL and target
+folder.
+
+### Create one worktree
 
 ```text
-Create a bare Git clone and initial worktree for git@github.com:owner/repo.git at ~/src/owner/repo.
+Create a bare Git clone and one initial worktree for
+`git@github.com:owner/repo.git` at `~/src/owner/repo`.
+```
+
+### Create four worktrees
+
+```text
+Create a bare Git clone for `git@github.com:owner/repo.git` at
+`~/src/owner/repo`, with four worktrees named `worktree1` through `worktree4`.
 ```
 
 ## What it creates

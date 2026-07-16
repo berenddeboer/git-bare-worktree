@@ -28,7 +28,15 @@ This creates:
 2. Reject non-SSH repository URLs. HTTPS URLs do not make sense for this setup.
 3. Ask the user for the target directory if it was not provided.
 4. Run the setup script with the SSH repository URL and target directory.
-5. Report the created bare repository and worktree paths.
+5. If the user requests more worktrees, create exactly that total number,
+   naming them `worktree1` through `worktreeN`. For each extra worktree, run:
+
+   ```bash
+   git --git-dir="<target>/.bare" worktree add -b "worktreeN" \
+     "<target>/worktreeN" HEAD
+   ```
+
+6. Report the created bare repository and worktree paths.
 
 ## Behavior
 
