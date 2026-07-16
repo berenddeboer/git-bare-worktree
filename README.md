@@ -7,7 +7,7 @@ An agent skill for cloning a Git repository as a **bare repository** and creatin
 This skill is intended to be installed **globally** so it is available to your agents from any project:
 
 ```bash
-npx skills@latest add berenddeboer/git-bare-worktree --global --full-depth
+npx skills@latest add berenddeboer/git-bare-worktree --global
 ```
 
 ## Using the script
